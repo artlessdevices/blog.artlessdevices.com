@@ -11,7 +11,7 @@ XML
 for meta in `ls posts | tac`; do (
 source "posts/$meta"
 timestamp=$(basename "$meta" ".sh")
-permalink="https://blog.artlessdevices.com/$timestamp.html"
+permalink="https://blog.artlessdevices.com/$timestamp"
 cat <<HTML
   <entry>
     <title>$title</title>
