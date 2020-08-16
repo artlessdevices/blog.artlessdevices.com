@@ -18,6 +18,10 @@ cat <<HTML
     <link href="$permalink" rel="alternate" type="text/html" title="$title"/>
     <id>$permalink</id>
     <published>$timestamp</published>
+    <author>
+      <name>$author</name>
+      <email>$email</email>
+    </author>
     <content type="html">$content</content>
   </entry>
 HTML
