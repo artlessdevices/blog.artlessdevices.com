@@ -13,16 +13,16 @@ cat <<HTML
       <h1>Artless Devices Blog</h1>
     </header>
     <main role=main>
-      <ol>
+      <ol reversed>
 HTML
-for meta in posts/*.sh; do (
-source "$meta"
+for meta in `ls posts | tac`; do (
+source "posts/$meta"
 base=$(basename "$meta" ".sh")
 cat <<HTML
         <li>
           <a href="$base">$title</a>
-          ($date)
           <p>$summary</p>
+          <p>$date</p>
         </li>
 HTML
 ) done
