@@ -4,6 +4,8 @@ cat <<HTML
 <html lang=en-US>
   <head>
     $(cat partials/meta.html)
+    <meta name="twitter:title" content="Artless Devices Blog">
+    <meta name="og:title" content="Artless Devices Blog">
     <link rel=alternate href=/atom.xml type=application/atom+xml>
     <title>Artless Devices Blog</title>
   </head>

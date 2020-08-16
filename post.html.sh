@@ -5,6 +5,8 @@ cat <<HTML
 <html lang=en-US>
   <head>
     $(cat partials/meta.html)
+    <meta name="twitter:title" content="$title">
+    <meta name="og:title" content="$title">
     <title>$title</title>
   </head>
   <body>
