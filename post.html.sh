@@ -4,23 +4,18 @@ cat <<HTML
 <!doctype html>
 <html lang=en-US>
   <head>
-    <meta charset=UTF-8>
-    <meta name=viewport content="width=device-width, initial-scale=1">
-    <title>Artless Devices Blog</title>
+    $(cat partials/meta.html)
+    <title>$title</title>
   </head>
   <body>
-    <header role=banner>
-      <h1>Artless Devices Blog</h1>
-    </header>
+    $(cat partials/banner.html)
     <main role=main>
       <h2>$title</h2>
       <p class=summary>summary</p>
       <p class=date>$date</p>
       $content
     </main>
-    <footer role=contentinfo>
-      <p>&copy; Artless Devices LLC</p>
-    </footer>
+    $(cat partials/footer.html)
   </body>
 </html>
 HTML

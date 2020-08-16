@@ -3,15 +3,12 @@ cat <<HTML
 <!doctype html>
 <html lang=en-US>
   <head>
-    <meta charset=UTF-8>
-    <meta name=viewport content="width=device-width, initial-scale=1">
+    $(cat partials/meta.html)
     <link rel=alternate href=/atom.xml type=application/atom+xml>
     <title>Artless Devices Blog</title>
   </head>
   <body>
-    <header role=banner>
-      <h1>Artless Devices Blog</h1>
-    </header>
+    $(cat partials/banner.html)
     <main role=main>
       <ol reversed>
 HTML
@@ -29,9 +26,7 @@ HTML
 cat <<HTML
       </ol>
     </main>
-    <footer role=contentinfo>
-      <p>&copy; Artless Devices LLC</p>
-    </footer>
+    $(cat partials/footer.html)
   </body>
 </html>
 HTML
