@@ -16,6 +16,7 @@ cat <<HTML
       <p>summary</p>
       <p>$1</p>
       $content
+      <p>&mdash; <a href="mailto:$email">$author</a></p>
     </main>
     $(cat partials/footer.html)
   </body>
