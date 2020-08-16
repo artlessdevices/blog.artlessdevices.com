@@ -8,16 +8,16 @@ cat <<XML
   <id>https://writing.kemitchell.com/atom.xml</id>
   <title type="html">Artless Devices Blog</title>
 XML
-for meta in posts/*.sh; do (
-source "$meta"
-base=$(basename "$meta" ".sh")
-permalink="https://blog.artlessdevices.com/$base.html"
+for meta in `ls posts | tac`; do (
+source "posts/$meta"
+timestamp=$(basename "$meta" ".sh")
+permalink="https://blog.artlessdevices.com/$timestamp.html"
 cat <<HTML
   <entry>
     <title>$title</title>
     <link href="$permalink" rel="alternate" type="text/html" title="$title"/>
     <id>$permalink</id>
-    <published>$date</published>
+    <published>$timestamp</published>
     <content type="html">$content</content>
   </entry>
 HTML

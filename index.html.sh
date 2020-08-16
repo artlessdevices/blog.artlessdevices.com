@@ -14,12 +14,12 @@ cat <<HTML
 HTML
 for meta in `ls posts | tac`; do (
 source "posts/$meta"
-base=$(basename "$meta" ".sh")
+timestamp=$(basename "$meta" ".sh")
 cat <<HTML
         <li>
-          <a href="$base">$title</a>
+          <a href="$timestamp">$title</a>
           <p>$summary</p>
-          <p>$date</p>
+          <p>$timestamp</p>
         </li>
 HTML
 ) done

@@ -1,5 +1,4 @@
 export title="Second Post"
-export date="2020-08-14T05:49Z"
 export summary="second post"
 content=$(
 cat<<HTML

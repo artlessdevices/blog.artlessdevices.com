@@ -12,7 +12,7 @@ cat <<HTML
     <main role=main>
       <h2>$title</h2>
       <p class=summary>summary</p>
-      <p class=date>$date</p>
+      <p class=date>$1</p>
       $content
     </main>
     $(cat partials/footer.html)
