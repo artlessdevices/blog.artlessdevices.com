@@ -1,0 +1,10 @@
+export title="from license zero to stricteq"
+export summary=""
+export author="kemitchell"
+export email="kyle@artlessdevices.com"
+content=$(
+cat<<HTML
+<p>Here is the first post!</p>
+HTML
+) || true
+export content
