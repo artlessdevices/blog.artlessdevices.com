@@ -3,8 +3,8 @@ export summary="second post"
 export author="K.E. Mitchell"
 export email="kyle@artlessdevices.com"
 content=$(
-cat<<HTML
+cat<<MARKDOWN
 <p>Here is the second post!</p>
-HTML
+MARKDOWN
 ) || true
 export content

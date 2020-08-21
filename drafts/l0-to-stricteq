@@ -1,10 +1,12 @@
-export title="from license zero to stricteq"
+export title="From License Zero to strictEq"
 export summary=""
 export author="kemitchell"
 export email="kyle@artlessdevices.com"
 content=$(
-cat<<HTML
-<p>Here is the first post!</p>
-HTML
+cat<<MARKDOWN
+In the middle of August, 2020, I announced that I would would be shutting License Zero down in favor of a new, evolved service.  That service, strictEq, has now launched at [strictEq.com](https://strictEq.com).
+
+Why transition? Two main reasons: to evolve the design of the system and to develop a new and different brand and presentation.
+MARKDOWN
 ) || true
 export content

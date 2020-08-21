@@ -15,7 +15,7 @@ cat <<HTML
       <h2>$title</h2>
       <p>summary</p>
       <p>$1</p>
-      $content
+      $(echo "$content" | commonmark)
       <p>&mdash; <a href="mailto:$email">$author</a></p>
     </main>
     $(cat partials/footer.html)
