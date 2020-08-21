@@ -13,7 +13,7 @@ cat <<HTML
     $(cat partials/banner.html)
     <main role=main>
       <h2>$title</h2>
-      <p>summary</p>
+      $(echo "$summary" | commonmark)
       <p>$1</p>
       $(echo "$content" | commonmark)
       <p>&mdash; <a href="mailto:$email">$author</a></p>
