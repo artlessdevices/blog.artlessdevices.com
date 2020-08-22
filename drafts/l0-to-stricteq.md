@@ -1,9 +1,9 @@
-export title="From License Zero to strictEq"
-export summary=""
-export author="kemitchell"
-export email="kyle@artlessdevices.com"
-content=$(
-cat<<MARKDOWN
+---
+title: From License Zero to strictEq
+summary: ""
+author: kemitchell
+email: kyle@artlessdevices.com
+---
 
 In the middle of August, 2020, I announced I would shut License Zero down in favor of a new, evolved service.  That service, strictEq, has launched at [strictEq.com](https://strictEq.com).
 
@@ -16,7 +16,3 @@ If one theme sounded through, it was shedding complications meant to keep the cu
 But having made the point on "scalability", in code and in print, reality set in.  There was no scale.  Creating broad change couldn't happen without confidence that the system could take it, but achieving confidence didn't automatically bestow critical mass.  The result was confidence, but also a mound of features solving problems the system didn't have, but could someday.  So helping new people understand those design choices worked more like proselytizing a faith than teaching a trade.  "This is how things will work, when they work better."  Instead of "This is how things are working better for us now."
 
 Having rolled a lot of that work back, I found myself with a simpler License Zero and a lot of complexity in the budget.  Lots of folks brought ideas on how to spend that budget.  License Zero should become a full-service agency, taking over money-management and marketing duties for developers.  License Zero should become a general license marketplace for all kinds of projects.  License Zero should integrate with Patreon, or GitHub Sponsors, or OpenCollective, or all of them.  License Zero should become the first instance of a general protocol for mixed free and paid licensing.
-
-MARKDOWN
-) || true
-export content
