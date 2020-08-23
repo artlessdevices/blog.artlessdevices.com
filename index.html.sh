@@ -14,13 +14,13 @@ cat <<HTML
     <main role=main>
       <ol reversed>
 HTML
-for meta in `ls posts | tac`; do (
-source "posts/$meta"
-timestamp=$(basename "$meta" ".sh")
+for meta in `find posts -iname "*.meta" | sort | tac`; do (
+source "$meta"
+timestamp=$(basename "$meta" ".meta")
 cat <<HTML
         <li>
           <a href="$timestamp">$title</a>
-          <p>$summary</p>
+          $(echo "$summary" | commonmark)
           <p>$timestamp</p>
         </li>
 HTML

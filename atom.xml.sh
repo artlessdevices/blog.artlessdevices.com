@@ -8,9 +8,9 @@ cat <<XML
   <id>https://writing.kemitchell.com/atom.xml</id>
   <title type="html">Artless Devices Blog</title>
 XML
-for meta in `ls posts | tac`; do (
-source "posts/$meta"
-timestamp=$(basename "$meta" ".sh")
+for meta in `find posts -iname "*.meta" | sort | tac`; do (
+source "$meta"
+timestamp=$(basename "$meta" ".meta")
 permalink="https://blog.artlessdevices.com/$timestamp"
 cat <<HTML
   <entry>
@@ -22,7 +22,7 @@ cat <<HTML
       <name>$author</name>
       <email>$email</email>
     </author>
-    <content type="html">$content</content>
+    <content type="html">$(commonmark < posts/$timestamp.content)</content>
   </entry>
 HTML
 ) done

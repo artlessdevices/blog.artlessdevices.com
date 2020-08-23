@@ -1,5 +1,5 @@
 #!/bin/bash
-source "posts/$1.sh"
+source "posts/$1.meta"
 cat <<HTML
 <!doctype html>
 <html lang=en-US>
@@ -15,7 +15,7 @@ cat <<HTML
       <h2>$title</h2>
       $(echo "$summary" | commonmark)
       <p>$1</p>
-      $(echo "$content" | commonmark)
+      $(commonmark < "posts/$1.content")
       <p>&mdash; <a href="mailto:$email">$author</a></p>
     </main>
     $(cat partials/footer.html)
